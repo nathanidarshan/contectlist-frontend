@@ -1,38 +1,156 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.desh-info {
+  position: absolute;
+  top: 10%;
+  right: 35%;
+  z-index: 3;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.desh_box {
+  border-radius: 0.375rem;
+  width: 300px;
+  height: 150px;
+  margin: 20px auto;
+  /* border: 20px solid black; */
+  background-color: white;
+  box-shadow: 0px 1px 5px grey;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.desh_box h3 {
   color: white;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 38px;
+}
+.desh_box a {
+  text-decoration: none;
+  padding: 45px 15px;
+  padding-left: 15px;
+  display: flex;
+  color: white;
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .desh-info {
+    border-radius: 0.375rem;
+    width: 100px;
+    height: 50px;
+    margin-left: 15px;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 20px solid black; */
+    background-color: white;
+    box-shadow: 0px 1px 5px grey;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.maindiv {
+  overflow: hidden;
+}
+.main {
+  background-color: #1565c0;
+  color: white;
+  padding: 12px 0;
+}
+.header {
+  margin-left: 10%;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 24px;
+}
+.saidbar {
+  /* margin-top: 20px; */
+  width: 23%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 10px gray;
+  border-radius: 0 0 10px 0px;
+}
+li {
+  list-style: none;
+}
+.dash {
+  position: absolute;
+  width: auto;
+  color: black;
+  z-index: 4;
+  text-align: center;
+  top: 30%;
+  right: 40%;
+}
+.accordion-button::after {
+  display: none;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+}
+
+.contectlist {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 5px gray;
+  border-radius: 5px;
+  width: auto;
+  /* margin: auto; */
+  color: black;
+  z-index: 4;
+  top: 18%;
+  left: 45%;
+}
+
+@media (max-width: 768px) {
+  .contectlist {
+    width: 300px;
+    left: 5%;
+    margin: 0 10px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+}
+
+.mainlist {
+  margin: auto;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .mainlist {
+    margin: auto;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.contectview {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 5px gray;
+  border-radius: 5px;
+  width: auto;
+  color: black;
+  z-index: 4;
+  top: 18%;
+  /* right: 15%; */
+  left: 29%;
+}
+
+@media (max-width: 768px) {
+  .contectview {
+    width: 300px;
+    left: 5%;
+    margin: 0 10px;
   }
 }
