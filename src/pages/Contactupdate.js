@@ -27,10 +27,10 @@ function Contactupdate() {
     useEffect(() => {
         try {
             // var token = localStorage.getItem('token');
-            axios.get('http://localhost:5000', {
-                headers: {
-                    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MTc5ODkwMTY1NDgtNDM2MzE0NTkyIiwiaWF0IjoxNzE3OTg5MDE2LCJleHAiOjE3MTgxNjE4MTZ9.PEQSpNqckwPz9TL4b6LiFsUnm6Sk5Dvf24yOfTNG2uI'
-                }
+            axios.get('https://contactbook-backend-uenk.onrender.com', {
+                // headers: {
+                //     Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MTc5ODkwMTY1NDgtNDM2MzE0NTkyIiwiaWF0IjoxNzE3OTg5MDE2LCJleHAiOjE3MTgxNjE4MTZ9.PEQSpNqckwPz9TL4b6LiFsUnm6Sk5Dvf24yOfTNG2uI'
+                // }
             })
                 .then(function (response) {
                     setbranchView(response.data.data)
@@ -60,7 +60,7 @@ function Contactupdate() {
             var headers = {
                 authorization: token
             }
-            const response = await axios.patch('http://localhost:5000/' + id, {
+            const response = await axios.patch('https://contactbook-backend-uenk.onrender.com/' + id, {
                 firstName: data,
                 lastName: lname,
                 mobileNo:mno,

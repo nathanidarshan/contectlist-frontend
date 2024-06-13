@@ -21,7 +21,7 @@ function Contactview() {
     var allshowdata = () => {
         try {
             // var token = localStorage.getItem('token');
-            axios.get('http://localhost:5000', {
+            axios.get('https://contactbook-backend-uenk.onrender.com', {
                 // headers: {
                 //     Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MTc5ODkwMTY1NDgtNDM2MzE0NTkyIiwiaWF0IjoxNzE3OTg5MDE2LCJleHAiOjE3MTgxNjE4MTZ9.PEQSpNqckwPz9TL4b6LiFsUnm6Sk5Dvf24yOfTNG2uI'
                 // }
@@ -42,7 +42,7 @@ function Contactview() {
     var Remove = async (id) => {
         console.log(id);
         try {
-            const response = await axios.delete("http://localhost:5000/" + id, {
+            const response = await axios.delete("https://contactbook-backend-uenk.onrender.com/" + id, {
                 _id: id,
             });
             console.log(response.data.data);
@@ -57,11 +57,11 @@ function Contactview() {
         try {
             if (e.length > 1) {
 
-                const response = await axios.get(`http://localhost:5000${e}`, {
-                    headers: {
-                        Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MTc5ODkwMTY1NDgtNDM2MzE0NTkyIiwiaWF0IjoxNzE3OTg5MDE2LCJleHAiOjE3MTgxNjE4MTZ9.PEQSpNqckwPz9TL4b6LiFsUnm6Sk5Dvf24yOfTNG2uI'
-                    }
-                })
+                const response = await axios.get(`https://contactbook-backend-uenk.onrender.com/` + e
+                    // headers: {
+                    //     Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MTc5ODkwMTY1NDgtNDM2MzE0NTkyIiwiaWF0IjoxNzE3OTg5MDE2LCJleHAiOjE3MTgxNjE4MTZ9.PEQSpNqckwPz9TL4b6LiFsUnm6Sk5Dvf24yOfTNG2uI'
+                    // }
+                )
                 console.log(response);
                 setcontactview(response.data.data);
             }
